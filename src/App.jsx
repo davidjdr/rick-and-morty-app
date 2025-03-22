@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Characters from "./components/Characters";
 import Episodes from "./components/Episodes";
+import Location from "./components/Location";
 
 function App() {
   const [section, setSection] = useState(null);
@@ -23,9 +24,13 @@ function App() {
       <div className="card">
         <button onClick={() => setSection("episodes")}>Ver episodios</button>
       </div>
+      <div className="card">
+        <button onClick={() => setSection("location")}>Ver ubicaciones</button>
+      </div>
 
       {section === "characters" && <Characters />}
       {section === "episodes" && <Episodes />}
+      {section === "location" && <Location />}
     </>
   );
 }
