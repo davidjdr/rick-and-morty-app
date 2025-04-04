@@ -19,4 +19,12 @@ export const rickAndMortyApi = {
       throw error;
     }
   },
-};
+  getLocation: async () => {
+    try {
+      const response = await fetch(`${BASE_URL}/location`);
+      return await response.json();
+    } catch (error) {
+      console.error("Error al obtener ubicacion", error);
+      throw error;
+    }
+} }
